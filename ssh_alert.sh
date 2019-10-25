@@ -13,7 +13,7 @@ fi
 shift
 host="`hostname`"
 
-content="\"attachments\": [ { \"mrkdwn_in\": [\"text\", \"fallback\"], \"fallback\": \"SSH login: $USER connected to \`$host\`\", \"text\": \"SSH login to \`$host\`\", \"fields\": [ { \"title\": \"User\", \"value\": \"$PAM_USER\", \"short\": true }, { \"title\": \"IP Address\", \"value\": \"$PAM_RHOST\", \"short\": true }, { \"title\": \"Date\", \"value\": \"`date`\", \"short\": true } ], \"color\": \"#F35A00\" } ]"
+content="\"attachments\": [ { \"mrkdwn_in\": [\"text\", \"fallback\"], \"fallback\": \"SSH login: $USER connected to \`$host\`\", \"text\": \"SSH login to \`$host\`\", \"fields\": [ { \"title\": \"User\", \"value\": \"$PAM_USER\", \"short\": true }, { \"title\": \"IP Address\", \"value\": \"$PAM_RHOST\", \"short\": true }, { \"title\": \"Date\", \"value\": \"`date`\", \"short\": true } ], \"footer\": \"CloudDrove\", \"footer_icon\": \"https://clouddrove.com/media/images/favicon.ico\", \"color\": \"#F35A00\" } ]"
 if [[ $content == "" ]]
 then
         echo "No text specified"
